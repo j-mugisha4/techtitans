@@ -389,21 +389,21 @@
 }
 
 
-/*** Donation ***/
-.donation-item {
+/*** Projects ***/
+.Projects-item {
     box-shadow: 0 0 30px rgba(0, 0, 0, .05);
     transition: .5s;
 }
 
-.donation-item:hover {
+.Projects-item:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, .1);
 }
 
-.donation-item .donation-progress {
+.Projects-item .Projects-progress {
     width: 80px;
 }
 
-.donation-item .progress .progress-bar {
+.Projects-item .progress .progress-bar {
     height: 20px;
     overflow: visible;
     transition: 3s;

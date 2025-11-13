@@ -65,9 +65,9 @@
     });
 
 
-    // Donation progress
-    $('.donation-item .donation-progress').waypoint(function () {
-        $('.donation-item .progress .progress-bar').each(function () {
+    // Projects progress
+    $('.Projects-item .Projects-progress').waypoint(function () {
+        $('.Projects-item .progress .progress-bar').each(function () {
             $(this).css("height", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
