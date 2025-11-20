@@ -255,8 +255,8 @@
                     <p class="text-dark mb-4"><i class="fa fa-check text-primary me-2"></i>Creative tools and materials
                     </p>
                     <div class="d-flex flex-wrap">
-                        <a class="btn btn-primary py-3 px-4 me-3 mb-2" href="">Join a Club</a>
-                        <a class="btn btn-secondary py-3 px-4 me-3 mb-2" href="">Become a Facilitator</a>
+                        <a class="btn btn-primary py-3 px-4 me-3 mb-2" href="#" data-bs-toggle="modal" data-bs-target="#joinClubModal">Join a Club</a>
+                        <a class="btn btn-secondary py-3 px-4 me-3 mb-2" href="#" data-bs-toggle="modal" data-bs-target="#facilitatorModal">Become a Facilitator</a>
                         <a class="btn btn-outline-primary py-3 px-4 mb-2" href="#prototype">See Prototype</a>
                     </div>
                 </div>
@@ -330,6 +330,162 @@
         </div>
     </div>
     <!-- Prototype End -->
+
+    <!-- Join Club Modal Start -->
+    <div class="modal fade" id="joinClubModal" tabindex="-1" aria-labelledby="joinClubModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="joinClubModalLabel"><i class="fa fa-book-reader me-2"></i>Join a Reading Club</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="joinClubForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="studentName" required>
+                                    <label for="studentName">Student Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="studentAge" min="6" max="18" required>
+                                    <label for="studentAge">Age</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="parentName" required>
+                                    <label for="parentName">Parent/Guardian Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="parentPhone" required>
+                                    <label for="parentPhone">Parent Phone</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="studentSchool" required>
+                                    <label for="studentSchool">Current School</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="gradeLevel" required>
+                                        <option value="">Select Grade</option>
+                                        <option value="P1">Primary 1</option>
+                                        <option value="P2">Primary 2</option>
+                                        <option value="P3">Primary 3</option>
+                                        <option value="P4">Primary 4</option>
+                                        <option value="P5">Primary 5</option>
+                                        <option value="P6">Primary 6</option>
+                                    </select>
+                                    <label for="gradeLevel">Grade Level</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="readingLevel" required>
+                                        <option value="">Select Level</option>
+                                        <option value="beginner">Beginner</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="advanced">Advanced</option>
+                                    </select>
+                                    <label for="readingLevel">Current Reading Level</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary py-3 w-100" onclick="submitJoinClubForm(event)">Join Club</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Join Club Modal End -->
+
+    <!-- Facilitator Modal Start -->
+    <div class="modal fade" id="facilitatorModal" tabindex="-1" aria-labelledby="facilitatorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title" id="facilitatorModalLabel"><i class="fa fa-users me-2"></i>Become a Club Facilitator</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="facilitatorForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="facilitatorName" required>
+                                    <label for="facilitatorName">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="facilitatorEmail" required>
+                                    <label for="facilitatorEmail">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="facilitatorPhone" required>
+                                    <label for="facilitatorPhone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="availability" required>
+                                        <option value="">Select Availability</option>
+                                        <option value="weekdays">Weekdays</option>
+                                        <option value="weekends">Weekends</option>
+                                        <option value="both">Both Weekdays & Weekends</option>
+                                    </select>
+                                    <label for="availability">Availability</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="experience" required>
+                                        <option value="">Select Experience</option>
+                                        <option value="none">No Experience</option>
+                                        <option value="some">Some Experience</option>
+                                        <option value="experienced">Very Experienced</option>
+                                    </select>
+                                    <label for="experience">Experience with Children</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="englishProficiency" required>
+                                        <option value="">Select Level</option>
+                                        <option value="basic">Basic</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="fluent">Fluent</option>
+                                    </select>
+                                    <label for="englishProficiency">English Proficiency</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="whyFacilitate" style="height: 100px" required></textarea>
+                                    <label for="whyFacilitate">Why do you want to become a facilitator?</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-secondary py-3 w-100" onclick="submitFacilitatorForm(event)">Apply to Facilitate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facilitator Modal End -->
 
 
     <!-- Newsletter Start -->
@@ -435,6 +591,28 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script>
+        function submitJoinClubForm(event) {
+            event.preventDefault();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('joinClubModal'));
+            modal.hide();
+            
+            setTimeout(() => {
+                alert('Thank you for your interest in joining our reading club! We have received your application and will contact you within 2 working days with club schedules and location details.');
+            }, 500);
+        }
+        
+        function submitFacilitatorForm(event) {
+            event.preventDefault();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('facilitatorModal'));
+            modal.hide();
+            
+            setTimeout(() => {
+                alert('Thank you for applying to become a reading club facilitator! We appreciate your commitment to helping children learn. We will reach out within 2 working days with training information and next steps.');
+            }, 500);
+        }
+    </script>
 </body>
 
 </html>

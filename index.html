@@ -330,7 +330,7 @@
                             <a href="#" class="h3 d-inline-block">Reading Clubs</a>
                             <p>Weekly English reading clubs featuring storytelling, phonics, and interactive learning
                                 games.</p>
-                            <a href="#" class="btn btn-primary w-100 py-3"><i class="fa fa-plus me-2"></i>Start a
+                            <a href="#" class="btn btn-primary w-100 py-3" data-bs-toggle="modal" data-bs-target="#clubModal"><i class="fa fa-plus me-2"></i>Start a
                                 Club</a>
                         </div>
                     </div>
@@ -359,7 +359,7 @@
                             <a href="#" class="h3 d-inline-block">Teacher Training</a>
                             <p>Hybrid English training program combining virtual and in-person sessions with
                                 certification.</p>
-                            <a href="#" class="btn btn-primary w-100 py-3"><i class="fa fa-plus me-2"></i>Join
+                            <a href="#" class="btn btn-primary w-100 py-3" data-bs-toggle="modal" data-bs-target="#teacherModal"><i class="fa fa-plus me-2"></i>Join
                                 Program</a>
                         </div>
                     </div>
@@ -479,6 +479,157 @@
         </div>
     </div>
     <!-- Full Solution Statement Modal End -->
+
+    <!-- Club Registration Modal Start -->
+    <div class="modal fade" id="clubModal" tabindex="-1" aria-labelledby="clubModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="clubModalLabel"><i class="fa fa-plus me-2"></i>Start a Reading Club</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="clubForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="schoolName" required>
+                                    <label for="schoolName">School Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="contactPerson" required>
+                                    <label for="contactPerson">Contact Person</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="schoolEmail" required>
+                                    <label for="schoolEmail">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="schoolPhone" required>
+                                    <label for="schoolPhone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="schoolLocation" required>
+                                    <label for="schoolLocation">School Location</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="studentCount" required>
+                                        <option value="">Select Range</option>
+                                        <option value="1-50">1-50 students</option>
+                                        <option value="51-100">51-100 students</option>
+                                        <option value="101-200">101-200 students</option>
+                                        <option value="200+">200+ students</option>
+                                    </select>
+                                    <label for="studentCount">Number of Students</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="preferredTime" required>
+                                        <option value="">Select Time</option>
+                                        <option value="morning">Morning (8-11 AM)</option>
+                                        <option value="afternoon">Afternoon (1-4 PM)</option>
+                                        <option value="evening">Evening (4-6 PM)</option>
+                                    </select>
+                                    <label for="preferredTime">Preferred Club Time</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary py-3 w-100" onclick="submitClubForm(event)">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Club Registration Modal End -->
+
+    <!-- Teacher Training Modal Start -->
+    <div class="modal fade" id="teacherModal" tabindex="-1" aria-labelledby="teacherModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="teacherModalLabel"><i class="fa fa-graduation-cap me-2"></i>Join Teacher Training Program</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="teacherForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="teacherName" required>
+                                    <label for="teacherName">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="teacherEmail" required>
+                                    <label for="teacherEmail">Email Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="teacherPhone" required>
+                                    <label for="teacherPhone">Phone Number</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="teacherSchool" required>
+                                    <label for="teacherSchool">Current School</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="teachingExperience" required>
+                                        <option value="">Select Experience</option>
+                                        <option value="0-2">0-2 years</option>
+                                        <option value="3-5">3-5 years</option>
+                                        <option value="6-10">6-10 years</option>
+                                        <option value="10+">10+ years</option>
+                                    </select>
+                                    <label for="teachingExperience">Teaching Experience</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="englishLevel" required>
+                                        <option value="">Select Level</option>
+                                        <option value="beginner">Beginner</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="advanced">Advanced</option>
+                                    </select>
+                                    <label for="englishLevel">Current English Level</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="motivation" style="height: 100px" required></textarea>
+                                    <label for="motivation">Why do you want to join this program?</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary py-3 w-100" onclick="submitTeacherForm(event)">Apply for Training</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Teacher Training Modal End -->
+
     <!-- Projects End -->
 
 
@@ -534,7 +685,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-secondary py-3 w-100" type="submit">Get Involved</button>
+                                    <button class="btn btn-secondary py-3 w-100" type="submit" onclick="showSuccessMessage(event)">Get Involved</button>
                                 </div>
                             </div>
                         </form>
@@ -649,6 +800,56 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script>
+        function submitClubForm(event) {
+            event.preventDefault();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('clubModal'));
+            modal.hide();
+            
+            setTimeout(() => {
+                alert('Thank you for your interest in starting a reading club! We have received your application and will respond within 2 working days with next steps and resources to help you get started.');
+            }, 500);
+        }
+        
+        function submitTeacherForm(event) {
+            event.preventDefault();
+            const modal = bootstrap.Modal.getInstance(document.getElementById('teacherModal'));
+            modal.hide();
+            
+            setTimeout(() => {
+                alert('Thank you for applying to our Teacher Training Program! We have received your application and will contact you within 2 working days with program details and enrollment information.');
+            }, 500);
+        }
+        
+        function showSuccessMessage(event) {
+            event.preventDefault();
+            const selectedRole = document.querySelector('input[name="btnradio"]:checked').nextElementSibling.textContent;
+            
+            let message = '';
+            switch(selectedRole) {
+                case 'Volunteer':
+                    message = 'Thank you for volunteering with us! We appreciate your commitment to education and will contact you within 2 working days with volunteer opportunities and training information.';
+                    break;
+                case 'Partner':
+                    message = 'Thank you for your interest in partnering with us! We value collaborative relationships and will reach out within 2 working days to discuss partnership opportunities.';
+                    break;
+                case 'Sponsor':
+                    message = 'Thank you for considering sponsoring our educational programs! Your support makes a real difference in children\'s lives. We will contact you within 2 working days with sponsorship packages and impact reports.';
+                    break;
+                case 'Mentor':
+                    message = 'Thank you for offering to mentor students and teachers! Your expertise is invaluable to our mission. We will reach out within 2 working days with mentorship opportunities.';
+                    break;
+                case 'Advocate':
+                    message = 'Thank you for becoming an advocate for literacy education! Your voice helps spread awareness. We will contact you within 2 working days with advocacy materials and campaign information.';
+                    break;
+            }
+            
+            setTimeout(() => {
+                alert(message);
+            }, 100);
+        }
+    </script>
 </body>
 
 </html>
