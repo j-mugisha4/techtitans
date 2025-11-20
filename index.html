@@ -330,7 +330,8 @@
                             <a href="#" class="h3 d-inline-block">Reading Clubs</a>
                             <p>Weekly English reading clubs featuring storytelling, phonics, and interactive learning
                                 games.</p>
-                            <a href="#" class="btn btn-primary w-100 py-3" data-bs-toggle="modal" data-bs-target="#clubModal"><i class="fa fa-plus me-2"></i>Start a
+                            <a href="#" class="btn btn-primary w-100 py-3" data-bs-toggle="modal"
+                                data-bs-target="#clubModal"><i class="fa fa-plus me-2"></i>Start a
                                 Club</a>
                         </div>
                     </div>
@@ -359,7 +360,8 @@
                             <a href="#" class="h3 d-inline-block">Teacher Training</a>
                             <p>Hybrid English training program combining virtual and in-person sessions with
                                 certification.</p>
-                            <a href="#" class="btn btn-primary w-100 py-3" data-bs-toggle="modal" data-bs-target="#teacherModal"><i class="fa fa-plus me-2"></i>Join
+                            <a href="#" class="btn btn-primary w-100 py-3" data-bs-toggle="modal"
+                                data-bs-target="#teacherModal"><i class="fa fa-plus me-2"></i>Join
                                 Program</a>
                         </div>
                     </div>
@@ -545,15 +547,17 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Partnership Fee Information -->
                         <div class="mt-4 p-3 bg-light rounded border">
                             <h6 class="text-primary mb-2"><i class="fa fa-info-circle me-2"></i>Partnership Fee</h6>
-                            <p class="mb-0 small text-dark">Annual partnership fee: <strong>99,000 RWF</strong> - covers training materials, facilitator support, monitoring, and program coordination.</p>
+                            <p class="mb-0 small text-dark">Annual partnership fee: <strong>$ 100</strong> - covers
+                                training materials, facilitator support, monitoring, and program coordination.</p>
                         </div>
-                        
+
                         <div class="mt-4">
-                            <button type="submit" class="btn btn-primary py-3 w-100" onclick="submitClubForm(event)">Submit Application</button>
+                            <button type="submit" class="btn btn-primary py-3 w-100"
+                                onclick="submitClubForm(event)">Submit Application</button>
                         </div>
                     </form>
                 </div>
@@ -567,7 +571,8 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="teacherModalLabel"><i class="fa fa-graduation-cap me-2"></i>Join Teacher Training Program</h5>
+                    <h5 class="modal-title" id="teacherModalLabel"><i class="fa fa-graduation-cap me-2"></i>Join Teacher
+                        Training Program</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body p-4">
@@ -622,13 +627,15 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" id="motivation" style="height: 100px" required></textarea>
+                                    <textarea class="form-control" id="motivation" style="height: 100px"
+                                        required></textarea>
                                     <label for="motivation">Why do you want to join this program?</label>
                                 </div>
                             </div>
                         </div>
                         <div class="mt-4">
-                            <button type="submit" class="btn btn-primary py-3 w-100" onclick="submitTeacherForm(event)">Apply for Training</button>
+                            <button type="submit" class="btn btn-primary py-3 w-100"
+                                onclick="submitTeacherForm(event)">Apply for Training</button>
                         </div>
                     </form>
                 </div>
@@ -692,7 +699,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-secondary py-3 w-100" type="submit" onclick="showSuccessMessage(event)">Get Involved</button>
+                                    <button class="btn btn-secondary py-3 w-100" type="submit"
+                                        onclick="showSuccessMessage(event)">Get Involved</button>
                                 </div>
                             </div>
                         </form>
@@ -807,34 +815,34 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    
+
     <script>
         function submitClubForm(event) {
             event.preventDefault();
             const modal = bootstrap.Modal.getInstance(document.getElementById('clubModal'));
             modal.hide();
-            
+
             setTimeout(() => {
-                alert('Thank you for your interest in starting a reading club! We have received your application and will respond within 2 working days with partnership details, payment information for the 99,000 RWF annual fee, and resources to help you get started.');
+                alert('Thank you for your interest in starting a reading club! We have received your application and will respond within 2 working days with partnership details, payment information for the $ 100 annual fee, and resources to help you get started.');
             }, 500);
         }
-        
+
         function submitTeacherForm(event) {
             event.preventDefault();
             const modal = bootstrap.Modal.getInstance(document.getElementById('teacherModal'));
             modal.hide();
-            
+
             setTimeout(() => {
                 alert('Thank you for applying to our Teacher Training Program! We have received your application and will contact you within 2 working days with program details and enrollment information.');
             }, 500);
         }
-        
+
         function showSuccessMessage(event) {
             event.preventDefault();
             const selectedRole = document.querySelector('input[name="btnradio"]:checked').nextElementSibling.textContent;
-            
+
             let message = '';
-            switch(selectedRole) {
+            switch (selectedRole) {
                 case 'Volunteer':
                     message = 'Thank you for volunteering with us! We appreciate your commitment to education and will contact you within 2 working days with volunteer opportunities and training information.';
                     break;
@@ -851,7 +859,7 @@
                     message = 'Thank you for becoming an advocate for literacy education! Your voice helps spread awareness. We will contact you within 2 working days with advocacy materials and campaign information.';
                     break;
             }
-            
+
             setTimeout(() => {
                 alert(message);
             }, 100);
